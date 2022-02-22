@@ -7,6 +7,7 @@ import { createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 
 import { rootReducers } from "./reducers/rootReducers";
+import { rootSlices } from "./slices/rootSlices";
 import { logActions } from "./middlewares";
 
 import thunk from "redux-thunk";
@@ -16,7 +17,7 @@ const composeAlt = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const composedEnhancers = composeAlt(applyMiddleware(thunk, logActions));
 
-const store = createStore(rootReducers, composedEnhancers);
+const store = createStore(rootSlices, composedEnhancers);
 
 ReactDOM.render(
   <Provider store={store}>

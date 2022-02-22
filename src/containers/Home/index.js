@@ -3,7 +3,8 @@ import Searcher from "../../components/Searcher";
 import PokemonList from "../../components/PokemonList";
 import "./styles.css";
 
-import { getPokemonsWithDetail } from "../../actions";
+// import { getPokemonsWithDetail } from "../../actions";
+import { getPokemonsWithDetail } from "../../slices/pokemonSlices";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Loader } from "../../components/Loader";
